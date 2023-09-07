@@ -1,0 +1,21 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false,
+    "source.sortImports": true,
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "prettier.configPath": ".prettierrc",
+  "jest.autoRun": "off",
+  "search.exclude": {
+    "pnpm-lock.yaml": true
+  },
+  "npm.packageManager": "pnpm",
+  "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-workspace.yaml, pnpm-lock.yaml"
+  }
+}
