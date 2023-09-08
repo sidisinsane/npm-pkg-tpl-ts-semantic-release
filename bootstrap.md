@@ -4,9 +4,11 @@ Note: Execute from terminal, not within VSCode.
 
 ```bash
 nvm use && \
-pnpm add -D typescript tsup prettier jest ts-jest @types/jest typedoc @mxssfd/typedoc-theme semantic-release @semantic-release/changelog @semantic-release/git commitizen && \
+pnpm add -D typescript tsup prettier jest ts-jest @types/jest typedoc @mxssfd/typedoc-theme semantic-release @semantic-release/changelog @semantic-release/git commitizen cz-conventional-changelog && \
+commitizen init cz-conventional-changelog --pnpm --save-dev --save-exact && \
 pnpm exec sort-package-json
 ```
+
 ## Basics
 
 ```bash
@@ -129,7 +131,8 @@ module.exports = {
 ## Release Workflow Automation
 
 ```bash
-pnpm add -D semantic-release @semantic-release/changelog @semantic-release/git
+pnpm add -D semantic-release @semantic-release/changelog @semantic-release/git commitizen cz-conventional-changelog && \
+commitizen init cz-conventional-changelog --pnpm --save-dev --save-exact
 ```
 
 Configure `semantic-release` by creating a `.releaserc` file:
@@ -163,6 +166,14 @@ Configure `semantic-release` by creating a `.releaserc` file:
       }
     ]
   ]
+}
+```
+
+Configure `commitizen` by creating a `.czrc` file:
+
+```json
+{
+  "path": "./node_modules/cz-conventional-changelog"
 }
 ```
 
