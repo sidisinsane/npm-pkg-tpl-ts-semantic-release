@@ -1,6 +1,6 @@
 {
   "name": "@humanuals/npm-pkg-tpl-ts-semantic-release",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A npm package template for typescript using semantic-release for automating the package release workflow.",
   "keywords": [
     "github",
